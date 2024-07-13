@@ -5,6 +5,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
 
 import { AppRoutingModule } from './app.routes';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ import { AppRoutingModule } from './app.routes';
     HeaderComponent,
     NavigationComponent,
     RouterModule,
+    CommonModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

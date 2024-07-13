@@ -1,1 +1,9 @@
-<p>posts-detail works!</p>
+<div class="p-4 overflow-y-auto">
+  <h1 mat-dialog-title class="text-sm lg:text-lg">{{ data.title }}</h1>
+  <div mat-dialog-content>
+    <p>{{ data.body }}</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="closeDialog()">Close</button>
+  </div>
+</div>

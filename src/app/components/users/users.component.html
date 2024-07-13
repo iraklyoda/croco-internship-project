@@ -1,1 +1,59 @@
 <p>users works!</p>
+
+<div class="flex justify-center">
+  <div class="lg:w-1/2 mb-4 w-4/5 overflow-x-auto">
+    <input
+      type="text"
+      placeholder="Search..."
+      [(ngModel)]="searchText"
+      class="mb-4 p-2 border border-gray-300"
+    />
+    <table class="table-auto w-full">
+      <thead class="bg-gray-50 border-b2 border-green-200">
+        <tr>
+          <th
+            class="hidden lg:table-cell p-3 text-sm font-semibold tracking-wide"
+          >
+            Name
+          </th>
+          <th class="p-3 text-sm font-semibold tracking-wide">Username</th>
+          <th
+            class="hidden lg:table-cell p-3 text-sm font-semibold tracking-wide"
+          >
+            Phone
+          </th>
+          <th
+            class="hidden lg:table-cell p-3 text-sm font-semibold tracking-wide"
+          >
+            Email
+          </th>
+          <th class="p-3 text-sm font-semibold tracking-wide">Company</th>
+          <th class="p-3 text-sm font-semibold tracking-wide">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of filteredUsers()" class="border-b-2">
+          <td class="hidden lg:table-cell text-sm">{{ user.name }}</td>
+          <td class="text-sm lg:text-md">{{ user.username }}</td>
+          <td class="hidden text-sm lg:table-cell">{{ user.phone }}</td>
+          <td class="hidden text-sm lg:table-cell">{{ user.email }}</td>
+          <td class="text-sm lg:text-md">{{ user.company.name }}</td>
+          <td class="block lg:flex">
+            <button
+              (click)="viewPosts(user.id)"
+              class="text-xs lg:text-md bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 lg:py-2 rounded ml-2"
+            >
+              Posts
+            </button>
+            <button
+              (click)="viewTodos(user.id)"
+              class="text-xs lg:text-md bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 lg:py-2 rounded ml-2"
+            >
+              Todos
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
