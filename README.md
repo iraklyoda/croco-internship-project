@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
+## Tech Stack:
+[![Angular](https://img.shields.io/badge/Angular-17-red?logo=Angular)](https://angular.io/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.4-blue?logo=tailwindcss)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/Typescript-5.5-blue?logo=typescript)](https://www.typescriptlang.org/)
+
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
